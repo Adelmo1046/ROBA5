@@ -1,0 +1,34 @@
+#include <Servo.h>
+//declaração de variáveis
+char inChar= 0;
+Servo s;
+int pos;
+
+const int pinoServo = 6;
+
+void setup() {                
+  Serial.begin(9600);
+
+
+ 
+}
+
+
+void loop() {
+
+  if (Serial.available() > 0) {
+    inChar= Serial.read();
+
+    if (inChar =='1'){
+      Serial.print("motor gira 180");
+      digitalWrite(pos = 0; < 180; pos++);
+      s.write(pos);
+    };
+    if (inChar =='0'){
+      Serial.print("motor volta ao inicio ");
+      digitalWrite(pos = 180; pos >= 0; pos--);{
+      s.write(pos);
+    } ;
+}
+
+}
